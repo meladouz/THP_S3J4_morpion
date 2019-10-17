@@ -18,6 +18,7 @@ class Board
         liste_position << "#{letter}#{nb}"
         end
       end
+
 # crée un hash_board et un hash avec les positions vides
     9.times do |i|
      @new_board[liste_position[i]] = BoardCase.new(liste_position[i], "-")
@@ -25,7 +26,7 @@ class Board
     end
 # afficher le plateau
     puts @hash_board
-  end
+  end # def initialize
 
   def play_turn (player)
 # demande au joueur 1 ce qu'il veut joueur
@@ -41,7 +42,7 @@ class Board
   def victory?
 #indique victoire ou match nul
 # 8 conditions de victoire
-   @hash_board["A1"].value
+   #if @hash_board["A1"].value = player.symbol && @hash_board["A2"].value = player.symbol && @hash_board["A3"].value = player.symbol
   end
 end
 
